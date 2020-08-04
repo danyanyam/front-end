@@ -4,9 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- JS -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/script.js')}}"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
   <title>Document</title>
 </head>
-<body>
 
+<body>
+  <!-- Первая секция -->
+  <section>
+    <!-- Navbar -->
+    <nav>
+      <!-- logo -->
+      <a href="#" class="logo">danyanyam</a>
+      <ul>
+        <!-- menu -->
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact me</a></li>
+      </ul>
+    </nav>
+    <div class="text-container">
+      <p>Hello,</p>
+      <p>I'm danyanyam</p>
+      <p>I'am an economist & hobby-designer</p>
+      <button class="hire-btn">Hire me!</button>
+      <button class="down-cv">Download CV!</button>
+    </div>
+    <object type="image/svg+xml" data="{{ url_for('static', filename='images/start.svg') }}">Your browser does not support SVG</object>
+  </section>
+
+  <div class="about-container">
+    <object type="image/svg+xml" data="{{ url_for('static', filename='images/placeholder1.svg') }}">Your browser does not support SVG</object>
+    <div class="about-text">
+      <p>About me.</p>
+      <p>I am loo.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, id.</p>
+    </div>
+
+  </div>
 </body>
+
 </html>
