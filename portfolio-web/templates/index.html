@@ -8,11 +8,15 @@
   <script type="text/javascript" src="{{ url_for('static', filename='js/script.js')}}"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <!-- FA -->
+  <script src="https://kit.fontawesome.com/b1dcea3326.js" crossorigin="anonymous"></script>
+
   <title>Document</title>
 </head>
 
 <body>
   <!-- Первая секция -->
+
   <section>
     <!-- Navbar -->
     <nav>
@@ -24,26 +28,88 @@
         <li><a href="#">About</a></li>
         <li><a href="#">Contact me</a></li>
       </ul>
+      <div class="toggle"></div>
     </nav>
     <div class="text-container">
       <p>Hello,</p>
       <p>I'm danyanyam</p>
-      <p>I'am an economist & hobby-designer</p>
+      <p>I'am an economist & fan of comp. sci.</p>
       <button class="hire-btn">Hire me!</button>
       <button class="down-cv">Download CV!</button>
     </div>
     <object type="image/svg+xml" data="{{ url_for('static', filename='images/start.svg') }}">Your browser does not support SVG</object>
   </section>
 
+  <!-- About me -->
   <div class="about-container">
     <object type="image/svg+xml" data="{{ url_for('static', filename='images/placeholder1.svg') }}">Your browser does not support SVG</object>
     <div class="about-text">
       <p>About me.</p>
-      <p>I am loo.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, id.</p>
+      <p>I am currently studying at <a href="https://www.hse.ru/en/info/" class="links">HSE</a> and my bachelor major is in economics.</p>
+      <p>I am doing research on the application of machine learning in economics. I also maintain a <a href="https://github.com/danyanyam/ilikeeconomics" class="links">repository</a> that contains some of my work, related to general problems, solved with machine learning and deep learning.</p>
+      <a href="https://github.com/danyanyam"><i class="fab fa-github fa-2x"></i></a>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="services-container">
+    <div class="services-text">
+      <p>My experience</p>
+      <p>Lorem ipsum dolor.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, dolore non laborum earum fuga quod unde animi, ipsa totam perspiciatis!</p>
+    </div>
+    <!--  Box -->
+    <div class="box-container">
+      <div class="box-1">
+        <div class="wrap"><object type="image/svg+xml" data="{{ url_for('static', filename='images/web.svg') }}" id="web-pic">Your browser does not support SVG</object></div>
+        <span>1</span>
+        <p class="heading">Web Design</p>
+        <hr>
+        <p class="details">I am practising web-development with such tools as plain vanilla css, Bootstrap, Jquery for front-end and flask for back-end.</p>
+      </div>
+      <div class="box-2">
+        <span>2</span>
+        <p class="heading">Data Mining</p>
+        <hr>
+        <p class="details">With the help of understanding web-sites' structure can access wide range of information's sources through the internet. Solved classical problems of structuring information (text-classification, NER-tagging)</p>
+      </div>
+      <div class="box-3">
+        <span>3</span>
+        <p class="heading">Statistical analysis</p>
+        <hr>
+        <p class="details">I am also keen in looking for insights in data. Can accomplish statistical analysis with the data, retrieved from data-mining.</p>
+
+      </div>
+      <div class="wrap"><object type="image/svg+xml" data="{{ url_for('static', filename='images/stat.svg') }}" class="box-pic">Your browser does not support SVG</object></div>
+    </div>
+
+    <!-- Contact -->
+
+  </div>
+  <div class="contact-me">
+    <p>If you would like to contact me, you can send me an email with the button below.</p>
+    <a href="mailto:dvbuchko@gmail.com"><button>Contact me</button></a>
+    <div class="social-icons">
+      <a href="https://www.vk.com/danyanyamnyam"><i class="fab fa-vk"></i></a>
+      <a href="https://github.com/danyanyam/ilikeeconomics"><i class="fab fa-github"></i></a>
+
     </div>
 
   </div>
-</body>
 
+<!-- <div class="wrap"><div class="shape"></div></div> -->
+<!-- Footer -->
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/b1dcea3326.js" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.toggle').click(function() {
+      $('.toggle').toggleClass('active')
+      $('nav').toggleClass('active')
+    })
+  })
+</script>
 </html>
